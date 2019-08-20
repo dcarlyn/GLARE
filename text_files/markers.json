@@ -1,6 +1,6 @@
 {
 	"hotspots": [{
-			"position": 1, // The order of the hotspots
+			"position": 1,
 			"latitude": 0.0,
 			"longitude": 0.0,
 			"name": "Victory Bell",
@@ -58,6 +58,6 @@
 			"three_dimensional_image1" : "./images/[INSERT HERE]",
 			"three_dimensional_image2" : "./images/[INSERT HERE]",
 			"start_audio" : "./audio/[INSERT HERE]"
-		} // Add more here. Be sure to add a comma after each JSON object
+		}
 	]
 }
