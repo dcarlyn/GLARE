@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geolocation</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./css/tours.css">
+        <link rel="manifest" href="./text_files/manifest.json">
+    
+        <script src="./js/jquery-1.11.2.min.js"></script>    
+        <script src="./js/three.min.js"></script>
+        <script src="./js/OrbitControls.js"></script> 
+        <script src="./js/Detector.js"></script>  
+        <script src="./js/StereoEffect.js"></script>
+        <script src="./js/DeviceOrientationControls.js"></script>
+        <script src='./js/threex.domevent.js'></script>
+        <script src='./js/helvetiker_regular.typeface.js'></script>
+        <script src='./js/THREEx.FullScreen.js'></script>
+        <script src='./js/threex.videotexture.js'></script>
+        <script src='./js/threex.webcamtexture.js'></script>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./pageJS/gpsManager.js"></script>
+        <script src="./pageJS/tours.js"></script>
+    </head>
+
+<body>
+    <div id="container">
+        <video autoplay="true" muted="" playsinline="" id="videoElement">
+        </video>
+
+        <div id="sphere"></div>
+
+        <div id="title-ctn" >
+            Victory Bell 
+        </div>
+
+        <div id = "navigation-menu">
+        </div>
+
+        <div id="navigation-area">
+            <button type = "button" id = "navigation-btn" onclick="toggleNavigationMenu();">
+                Menu
+            </button>
+        </div>
+
+        <div id = "music-selection-menu">
+        </div>
+
+        <div id = "music-selection-area">
+            <button type = "button" id = "music-selection-btn" onclick="toggleMusicMenu();">
+                Media
+            </button>
+        </div>
+
+        <div id = "fixed-footer">
+            <div>
+                <button type = "button" id = "calibrate-north-btn" onclick="calibrateNorth();">
+                    Show Me!
+                </button>
+            </div>
+            <audio id="audio-player" controls="controls" autoplay=true >
+                <source id="mp3_src" type="audio/mpeg" type="audio/mp3" />
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+
+        <div id="overlaybuttonmap"> <img id="overlaybuttonmap" src='./images/map.png' width='10%' id="overlaybuttonmap" onclick="onMapClicked()">
+
+        </div>
+    </div>
+
+    <iframe id="iframe_a" name="iframe_a" src="./pages/navset.html" allowtransparency="true" ></iframe>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script src="../../js/jquery-1.11.2.min.js"></script>
+    <script src="../../pageJS/navigationMap.js"></script>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+        z-index: 2; 
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+ #overlaybuttonback {
+    position: fixed; /* Sit on top of the page content */
+    width: 10%; /* Full width (cover the whole page) */
+    left: 0;
+    bottom: 0;
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+
+<div id="overlaybuttonback"> <img  src='./media/back.png' width='10%' id="overlaybuttonback" onclick= window.history.back();  />
+ </div>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN1JvANSA7NW3epA4m3_BSResEu9oasr0&callback=initMap&v=3&libraries=geometry">
+    </script>
+  </body>
+</html>

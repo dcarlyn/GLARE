@@ -1,0 +1,28 @@
+<!doctype html> 
+<html>
+	<head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" type="text/css" href="../../css/main.css" >
+        <title>Main</title>
+		<script src="../../js/jquery-1.11.2.min.js"></script>
+		<script src="../../pageJS/main.js"></script>
+	</head>
+
+	<body bgcolor="#E6E6FA">
+		<div id = "textCtn" onclick="fadeOutText();">
+			<h1 id = "title">{ INVALID }</h1>
+			<p id = "text">{ INVALID }</p>
+		</div>
+		<div>
+			<audio id="audio-player" controls="controls" autoplay=true onended="switchToOralHistory();">
+                <source id="mp3_src" type="audio/mpeg" type="audio/mp3" />
+                Your browser does not support the audio element.
+            </audio>
+		</div>
+		<div id="overlaybuttonback" > <img id="overlaybuttonback"  src='../../images/back.png' onclick="goBack()" /> </div>
+	</body>
+</html>

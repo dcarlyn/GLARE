@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geolocation</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <style>
+            /*
+             *  Much of the CSS on this page is outdated and is no longer used.
+             *  It is possible that some of these stylings could be causing
+             *  problems with current layout issues of the nav bar.
+             */
+
+
+            /* Always set the map height explicitly to define the size of the div
+             * element that contains the map. */
+            #map {
+              height: 100%;
+              z-index: 2; 
+            }
+            /* Optional: Makes the sample page fill the window. */
+            html, body {
+              height: 100%;
+              margin: 0;
+              padding: 0;
+            }
+
+            #overlaybuttonnext {
+                position: fixed; /* Sit on top of the page content */
+                width: 2%; /* Full width (cover the whole page) */
+                height: 2%; /* Full height (cover the whole page) */
+                top: 0;
+                left: 0;
+                z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+                cursor: pointer; /* Add a pointer on hover */
+            }
+
+            #overlaybuttonaudio {
+                position: fixed; /* Sit on top of the page content */
+                position: fixed; /* Sit on top of the page content */
+                width: 10%; /* Full width (cover the whole page) */
+                height: 10%; /* Full height (cover the whole page) */
+                right: 60%;
+                bottom: 0%;
+                z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+                cursor: pointer; /* Add a pointer on hover */
+            }
+
+            #overlaybuttonmap {
+                position: fixed; /* Sit on top of the page content */
+                width: 10%; /* Full width (cover the whole page) */
+                height: 4%; /* Full height (cover the whole page) */
+                right: 40%;
+                top: 80%;
+                z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+                cursor: pointer; /* Add a pointer on hover */
+            }
+
+            #overlaybutton {
+                position: fixed; /* Sit on top of the page content */
+                width: 22%; /* Full width (cover the whole page) */
+                height: 8%; /* Full height (cover the whole page) */
+                right: 2%;
+                text-shadow: 2px 2px 4px #ffffff;
+                background-color: rgba(0, 0, 0, .5);	  
+                font-size: 2.5vw;
+                font-weight: bold;
+                font-style: italic;
+            }
+
+            #sphere {
+                height:100%;
+                width:100%;
+                background-color: rgba(255, 0, 255, 0);	 
+                z-index:-2;
+            }
+
+            #hotspottxt {
+                position: fixed;
+                top: 2%;
+                left: 28%;
+                z-index: 4;
+            	  font-size: 4vw;
+                font-weight: bold;
+                font-style: italic;
+                text-shadow: 2px 2px 4px #ffffff;
+            }
+
+            #videoElement {
+                width: 100%;
+                position: fixed; /* Sit on top of the page content */
+                z-index: -3; /* Specify a stack order in case you're using a different order for other elements */
+            }
+
+            #iframe_a {
+                height: 100%;
+                width: 100%;
+                position: fixed; /* Sit on top of the page content */
+                z-index: 0; /* Specify a stack order in case you're using a different order for other elements */
+                top:0%;
+                left:0%;
+            }
+
+             #overlaybuttonback {
+                position: fixed; /* Sit on top of the page content */
+                width: 10%; /* Full width (cover the whole page) */
+                bottom: 0px;
+                z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
+            }
+
+             #audio {
+                position: fixed; /* Sit on top of the page content */
+                bottom:0%;
+                right:0%;
+                z-index: 52; /* Specify a stack order in case you're using a different order for other elements */
+                cursor: pointer; /* Add a pointer on hover */
+            }
+
+            #selection {
+                position: absolute;
+                z-index: 51; /* Specify a stack order in case you're using a different order for other elements */
+            }
+
+            #overlaybuttonmap {
+                position: fixed; /* Sit on top of the page content */
+                width: 10%; /* Full width (cover the whole page) */
+                height: 10%; 
+                bottom: 0px;
+                left:50%;
+                z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+                cursor: pointer; /* Add a pointer on hover */
+            }
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div id="map"></div>
+
+        <div id="overlaybuttonback"> <img id="overlaybuttonback"   src='../images/back.png' onclick= window.history.back();  />
+        </div>
+    </body>
+</html>
