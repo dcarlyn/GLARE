@@ -53,7 +53,26 @@ function stopaudio() {
     //startaudio.currentTime = 0;
     var elem = document.getElementById("stream");
     elem.parentNode.removeChild(elem);
-    loadpage('./tours.html');
+    
+    //test to ask for motion sensor access
+    if (typeof DeviceMotionEvent.requestPermission === 'function') {
+  	// iOS 13+
+  	DeviceOrientationEvent.requestPermission()
+	.then(response => {
+  	if (response == 'granted') {
+    	// permission granted
+    	loadpage('./tours.html');
+ 	 } 
+ 	 else {
+    	// permission not granted
+	alert("Motion access is required to view this site, Please delete your website cache in Settings -> Safari and reload.");
+  	}
+      })
+	.catch(console.error);
+      } else {
+  	// non iOS 13+
+  	loadpage('./tours.html');
+      }
 }
 
 function setFullScreen() {
